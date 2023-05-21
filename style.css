@@ -1,0 +1,19 @@
+#bloque1{
+    background: blue;
+    width: 60%;
+    display: inline-block;
+}
+
+#bloque2{
+    background: white;
+
+    display: inline-block;
+}
+
+body{
+    background: #f3f5fc;
+}
+
+input{
+    display: inline-block;
+}
