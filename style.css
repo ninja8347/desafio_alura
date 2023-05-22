@@ -1,19 +1,59 @@
-#bloque1{
-    background: blue;
-    width: 60%;
-    display: inline-block;
-}
-
-#bloque2{
-    background: white;
-
-    display: inline-block;
-}
-
 body{
     background: #f3f5fc;
 }
 
-input{
-    display: inline-block;
+#bloque0{
+    width: 100%;
+
+    display: flex;          /* SE PEGAN LOS DOS DIV          */
+}
+
+#bloque1{
+    background: blue;
+    width: 70%;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+#bloque2{
+    background: red;
+    width: 30%;
+    
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#bloque3{
+    background: black;
+}
+
+#busqueda{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.area{
+    margin: 0 auto;
+    display: flex;
+}
+
+
+@media screen and (max-width:768px){
+    #bloque0{                              
+        display: inline-block;           /*SE VUELVE REPONSIVE (DA UN SALTO Y SE ACOMODA ABAJO)          */
+    }
+    
+    #bloque1{
+        width: 100%;
+        height: 50%;
+    }
+
+    #bloque2{
+        width: 100%;
+    }
+
+    #busqueda{
+        width: 50%;
+    }
+    
 }

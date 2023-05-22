@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="es-419">
     <head>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+
         <title>Encriptador - Desafio Alura </title>
     </head>
     <body>
         <header>
  
         </header>
-        <main>
-
+        <main id="bloque0">
             <div id="bloque1">
                 <h1>
                     <img src="alura.svg">
                 </h1>
-                <textarea cols="auto" rows="auto">Escriba...</textarea>
+                <textarea class="area" cols="auto" rows="auto">Ingrese texto aqui </textarea>
 
                 <input type="submit" value="Encriptar">
                 <input type="submit" value="Desencriprar">
-
-            </div><div id="bloque2">
-
-                <textarea cols="auto" rows="auto" readonly>Codigo encriptado...</textarea>
-                <input type="submit" value="Copiar">
-
+            </div>
+            <div id="bloque2">
+                <div id="bloque3">
+                    <img id="busqueda" src="search.svg">
+                    <textarea class="area" cols="auto" rows="auto" readonly>Codigo encriptado...</textarea>
+                    <input type="submit" value="Copiar">
+                </div>
             </div>
         </main>
         <footer>
