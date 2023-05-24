@@ -1,59 +1,135 @@
 body{
     background: #f3f5fc;
+
 }
 
 #bloque0{
-    width: 100%;
+    background: yellow;
+    min-height: 100vh;
 
-    display: flex;          /* SE PEGAN LOS DOS DIV          */
 }
 
 #bloque1{
+
     background: blue;
-    width: 70%;
-    padding: 10%;
+
+    padding: 40px;
     box-sizing: border-box;
+  
+    text-align: center;     /* CENTRAR LA botones            */
+
+    min-height: calc(100vh - 71px);    /* SE CALCULA RESTA DE: <PANTALLA> - <H1>           */
 }
 
 #bloque2{
     background: red;
     width: 30%;
-    
-    padding: 40px;
-    box-sizing: border-box;
+
+    text-align: center;     /* CENTRAR LA botones            */
+    float: right;       /*ACOMODAR UN DIV A LA DERECHA          */
+
+    min-height: 100vh;              /*ALTURA MIN = PANTALLA VIRTUAL          */
+
 }
 
 #bloque3{
-    background: black;
+    background: white;
+
+    text-align: center;         /* CENTRAR LA IMAGEN            */
+    border-radius: 10px;
+
+    min-height: calc(100vh - 80px);         /* SE CALCULA RESTA DE: <PANTALLA> - <PADDING>           */
+    margin: 40px;
+
 }
 
+#bloque5{
+    background: green;
+    width: 70%;
+    display: inline-block           /* ES PARA QUE EL DIV ROJO SE PEGUE AL LADO DERECHO    */
+}
+
+
 #busqueda{
+
+    padding-top: 50%;
+    padding-bottom: 20px;
     width: 80%;
-    margin: 0 auto;
+
+ 
+
+    
 }
 
 .area{
-    margin: 0 auto;
-    display: flex;
+    margin: 20px auto;
+    display: block;
+}
+
+#area1{
+    width: 70%;
+}
+
+#area2{
+    width: 90%;
 }
 
 
+
+.botones1{
+    width: 35%;
+    padding: 10px;
+    margin-left: 20px;
+  
+    border-radius: 14px;
+  
+}
+
+#botones2{
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+
+  
+}
+
+
+/*
+footer{
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+    background: black;
+    color: white;
+    clear:both;     /*LIPIA EL <FLOAT: RIGHT> Y LO PONE OTRA VEZ COMO BLOQUE     
+}
+*/
+
+#alura{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 @media screen and (max-width:768px){
-    #bloque0{                              
-        display: inline-block;           /*SE VUELVE REPONSIVE (DA UN SALTO Y SE ACOMODA ABAJO)          */
-    }
+
     
-    #bloque1{
+    #bloque5{
         width: 100%;
         height: 50%;
     }
 
     #bloque2{
         width: 100%;
+        height: 50%;
     }
 
     #busqueda{
         width: 50%;
+        margin: 0 auto;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    
 }
