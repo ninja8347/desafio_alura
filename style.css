@@ -1,135 +1,289 @@
 body{
-    background: #f3f5fc;
+    background: #e9ecf8;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 #bloque0{
-    background: yellow;
-    min-height: 100vh;
+   
 
+    background: yellow;
+
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+#bloque5{
+    background: blue;
+    display: inline-block;      /*ACOMODAR UN DIV JUNTO A OTRO       parte1 */
+    width: 60%;
+
+    height: 95vh;
+}
+
+#bloque4{
+    width: 100%;
+    
 }
 
 #bloque1{
+    width: 100%;
 
-    background: blue;
-
-    padding: 40px;
-    box-sizing: border-box;
-  
-    text-align: center;     /* CENTRAR LA botones            */
-
-    min-height: calc(100vh - 71px);    /* SE CALCULA RESTA DE: <PANTALLA> - <H1>           */
+    text-align: center;              /* CENTRAR LA botones            */
+ 
 }
+
+#bloque6{
+
+    width: 90%;
+    margin: 0 auto;
+  
+
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
 
 #bloque2{
     background: red;
-    width: 30%;
+    width: 40%;
 
     text-align: center;     /* CENTRAR LA botones            */
-    float: right;       /*ACOMODAR UN DIV A LA DERECHA          */
+    float: right;       /*ACOMODAR UN DIV A LA DERECHA        parte2  */
 
-    min-height: 100vh;              /*ALTURA MIN = PANTALLA VIRTUAL          */
+
+    padding: 40px;
+    box-sizing: border-box;
+
 
 }
 
 #bloque3{
     background: white;
-
     text-align: center;         /* CENTRAR LA IMAGEN            */
-    border-radius: 10px;
+    border-radius: 30px;
 
-    min-height: calc(100vh - 80px);         /* SE CALCULA RESTA DE: <PANTALLA> - <PADDING>           */
-    margin: 40px;
+
+    height: calc(95vh - 80px); 
+
+  
 
 }
 
-#bloque5{
-    background: green;
-    width: 70%;
-    display: inline-block           /* ES PARA QUE EL DIV ROJO SE PEGUE AL LADO DERECHO    */
-}
-
+/*-----------------------------------------------------------------------------------------------------------*/
 
 #busqueda{
 
-    padding-top: 50%;
     padding-bottom: 20px;
-    width: 80%;
-
- 
-
-    
+    width: 60%;
 }
 
-.area{
-    margin: 20px auto;
-    display: block;
-}
 
 #area1{
-    width: 70%;
+    width: 88%;
+    min-height: calc(95vh - 250px);
+    background: #e9ecf8;
+
+    margin-top: 20px;
+    color: #0a3871;
+    font-size: 30px;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 #area2{
     width: 90%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-
+#encriptar{
+    margin-right: 6%;
+    background: #0a3871;
+    color: white;
+}
 
 .botones1{
-    width: 35%;
+    width: 40%;
     padding: 10px;
-    margin-left: 20px;
-  
-    border-radius: 14px;
-  
+    font-size: 14px;
+    margin: 10px 0;
+    border-radius: 5px;
+
 }
 
-#botones2{
+.botones2{
     width: 90%;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     margin-top: 10px;
     margin-bottom: 20px;
-    border-radius: 14px;
-
+    border-radius: 10x;
+    bottom: 0;
   
+
 }
 
+/*-----------------------------------------------------------------------------------------------------------*/
 
-/*
-footer{
-    padding: 40px;
-    margin: 40px;
+#nota{
+    margin-top: 20px;
+    margin-left: 6%;
+    text-align:left ;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    color: black bold;
+}
+
+#rodapie{
+    height: 5vh;
     text-align: center;
-    background: black;
-    color: white;
-    clear:both;     /*LIPIA EL <FLOAT: RIGHT> Y LO PONE OTRA VEZ COMO BLOQUE     
 }
-*/
+
+.pie1{
+    width: 70%;
+    display: inline-block;
+}
+
+.pie_padre1{
+    display: inline-block;
+} 
+
+.pie_hijo1{
+    display: flex;
+    align-items: center;
+    height: 5vh;
+ } 
+
+
+.pie2{
+    float: right;
+    width: 30%;
+} 
+
+.pie_padre2{
+    display: inline-block;
+} 
+
+.pie_hijo2{
+   display: flex;
+   align-items: center;
+   height: 5vh;
+} 
+
+.creditos{
+    font-family:'consolas';
+
+}
 
 #alura{
-    padding-left: 20px;
+    padding-left: 6%;
     padding-top: 20px;
 }
 
-@media screen and (max-width:768px){
+#advertencia{
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
-    
-    #bloque5{
-        width: 100%;
-        height: 50%;
-    }
+.logos{
+    height: 3vh;
+    margin-right: 10px;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
 
-    #bloque2{
-        width: 100%;
-        height: 50%;
-    }
+@media screen and (max-width: 750px) and ( max-width:768px){
 
     #busqueda{
-        width: 50%;
+        width: 40%;
         margin: 0 auto;
 
         padding-top: 20px;
         padding-bottom: 20px;
     }
+
+    /* -----------------------*/
+    
+    #rodapie{
+        height: 100%;
+    }
+    
+    .pie1{
+        width: 100%;
+    }
+    
+    .pie2{
+        width: 100%;
+    } 
+    
+
+    
+    .creditos{
+        font-size: 10px;
+    
+    }
+
+    /* -----------------------*/
+
+    #busqueda{
+   
+        height: 40%;
+    }
+    
+    
+    #area1{
+        margin-top: 40px;
+ 
+        min-height: 70vh;
+    
+    }
+    
+    #encriptar{
+        margin-right: 10px;
+    }
+    
+       /* -----------------------*/
+    
+   
+    #bloque1{
+        width: 100%;
+  
+        background: black;
+        
+    }
+
+    #bloque2{
+        width: 100%;
+
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #bloque3{
+        height: 40vh;   
+
+    }
+
+    #bloque5{
+        width: 100%;
+        height: 50%;
+        
+    }
+
+    #bloque6{
+        width: 100%;
+  
+    }
+
+    #alura{
+        padding-left: 40px;
+    
+    }
+    
 }
