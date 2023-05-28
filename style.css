@@ -64,25 +64,65 @@ body{
 #bloque3{
     background: white;
     text-align: center;         /* CENTRAR LA IMAGEN            */
-    border-radius: 30px;
-
+    border-radius: 20px;
+    width: 100%;
 
     height: calc(95vh - 80px); 
+    display: inline-block;
 
-  
+}
 
+#bloque7{
+    height: 70%;
+    display: flex;
+    align-items: center;
+
+    background: pink;
+}
+
+#bloque8{
+    display: inline-block;
+    height: 100%;
+    background: green;
+}
+
+#bloque9{
+    height: 30%;
+    
+    display: inline-block;
+}
+
+#mensaje1{
+    font-size: 20px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    background: brown;
+}
+
+#mensaje2{
+    background: orange;
+    font-size: 15px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
 
 #busqueda{
-
-    padding-bottom: 20px;
+    height: 100%;
     width: 60%;
 }
 
 
 #area1{
+ 
+
     width: 88%;
     min-height: calc(95vh - 250px);
     background: #e9ecf8;
@@ -100,11 +140,21 @@ body{
 }
 
 #area2{
+    height: 70%;
+
+    border: none;
+    overflow: auto;
+    outline: none;
+    margin-top: 20px;
     width: 90%;
-    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+    color: #0a3871;
+    font-size: 30px;
+
 }
 
-#encriptar{
+#encriptar1{
     margin-right: 6%;
     background: #0a3871;
     color: white;
@@ -120,7 +170,8 @@ body{
 }
 
 .botones2{
-    width: 90%;
+
+    width: 80%;
     padding: 10px 10px 10px 10px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -198,7 +249,7 @@ body{
 }
 /*-----------------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 750px) and ( max-width:768px){
+@media screen and ( max-width:768px){
 
     #busqueda{
         width: 40%;
@@ -267,7 +318,7 @@ body{
 
     #bloque3{
         height: 40vh;   
-
+        width: 100%;
     }
 
     #bloque5{

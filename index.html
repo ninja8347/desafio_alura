@@ -23,20 +23,30 @@
      
                 <div id="bloque1">
                     <div id="bloque6">
-                        <textarea id="area1" class="area" cols="auto" rows="auto">Ingrese texto aqui...uifhajhfkahfuahsifuhaufhiausfhua</textarea>
+                        <textarea id="area1" class="area" cols="auto" rows="auto" placeholder="Ingrese texto aqui..." required ></textarea>
                         <p id="nota"><img id="advertencia" src="advertencia.svg">Solo letras en minuscula sin acento.</p>
-                        <input id="encriptar" class="botones1" type="submit" value="Encriptar">
-                        <input class="botones1" type="submit" value="Desencriprar">
+                        <input onclick="encriptar2()" id="encriptar1" class="botones1" type="button" value="Encriptar" >
+                        <input onclick="desencriptar2()" id="desencriptar1" class="botones1" type="button" value="Desencriprar">
                     </div>
                 </div>
             </div>
 
             <div id="bloque2">
                 <div id="bloque3">
-                    <img id="busqueda" src="search.svg">
-                    <textarea id="area2" class="area" cols="auto" rows="auto" readonly>Codigo encriptado... jshdjfhajfhakfhjkashfkajshfjksfhajksf</textarea>
-                   
-                    <input class="botones2" type="submit" value="Copiar">
+
+                    <div id="bloque7">
+                        <img id="busqueda" src="search.svg">
+                    </div>
+                    <div id="bloque9">
+                        <p id="mensaje1">Ningún mensaje fue encontrado.</p>
+                        <p id="mensaje2">Ingrese texto para encriptar o desencripatar</p>
+                    </div>
+       
+                    <div id="bloque8">
+                        <textarea id="area2" class="area" cols="auto" rows="auto" readonly></textarea>
+                        <input onclick="copiar2()" id="copiar1" class="botones2" type="button" value="Copiar"> 
+                    </div>
+
                 </div>
             </div>
 
@@ -61,5 +71,7 @@
 
         </div>
         </main>
+
+        <script src="encriptar.js"></script>
     </body>
 </html>
