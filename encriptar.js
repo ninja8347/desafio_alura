@@ -46,36 +46,40 @@ function buscar(cambio) {
 
 function encriptar2(){
     text1 = document.getElementById("area1").value;
+    var validar=text1.length;
 
-    var simbolos=text1.charCodeAt();
-
-    console.log(simbolos);
+    if(validar >0){
+        text1 = document.getElementById("area1").value;
+        var validar=text1.length;
     
-    if(text1 !=""){
+        for(var x = 0; x < text1.length; x++) {
+            var caracter=text1.charAt(x);
+            var caracter2= caracter.charCodeAt();
+            
+            console.log(caracter2);
 
-        if (text1 == text1.toUpperCase()){
+            if(caracter2 >=97 && caracter2 <= 123){
+                console.log("NO VALIDO: " + caracter2);
 
-            var color= document.getElementById("nota");
-            color.style.color="red";
-        }
-        else{
-            buscar(text1);
+                var advertencia= document.getElementById("nota");
+                advertencia.style.color="red";
+                break;
+                
+            }else{
+                var color= document.getElementById("nota");
+                color.style.color="black";
 
-            var color= document.getElementById("nota");
-            color.style.color="black";
 
-            respuesta=false;
-            visible(respuesta);
-    
-            informacion=true;
-            return informacion;
+                respuesta=false;
+                visible(respuesta);
+        
+            }
         }
     }
     else{
-        alert("DEBES AGREGAR DATOS");
+        alert("¡¡PRIMERO DEBES AGREGAR DATOS!!");
     }
     
-   
 }
 
 function desencriptar2(){
@@ -89,8 +93,7 @@ function desencriptar2(){
     
             respuesta=false;
             visible(respuesta);
-    
-            console.log(text2);
+
         }
     
         if(text2==text1 && text1 != "" && text2 != ""){         //-------->
