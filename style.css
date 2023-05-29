@@ -7,7 +7,7 @@ body{
 #bloque0{
    
 
-    background: yellow;
+    background: none;
 
 
 }
@@ -17,7 +17,7 @@ body{
 
 
 #bloque5{
-    background: blue;
+
     display: inline-block;      /*ACOMODAR UN DIV JUNTO A OTRO       parte1 */
     width: 60%;
 
@@ -48,7 +48,7 @@ body{
 /*-----------------------------------------------------------------------------------------------------------*/
 
 #bloque2{
-    background: red;
+   
     width: 40%;
 
     text-align: center;     /* CENTRAR LA botones            */
@@ -77,13 +77,13 @@ body{
     display: flex;
     align-items: center;
 
-    background: pink;
+  
 }
 
 #bloque8{
     display: inline-block;
     height: 100%;
-    background: green;
+
 }
 
 #bloque9{
@@ -99,11 +99,11 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Open Sans', sans-serif;
-    background: brown;
+
 }
 
 #mensaje2{
-    background: orange;
+
     font-size: 15px;
     height: 50%;
     display: flex;
