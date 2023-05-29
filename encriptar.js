@@ -39,14 +39,20 @@ function buscar(cambio) {
     console.log(codigo)
     document.getElementById("area2").innerHTML=codigo;
 
+
+
+
     
   }
 
 
+var original;
 
 function encriptar2(){
     text1 = document.getElementById("area1").value;
     var validar=text1.length;
+
+    original=text1;
 
     if(validar >0){
         text1 = document.getElementById("area1").value;
@@ -59,20 +65,23 @@ function encriptar2(){
             console.log(caracter2);
 
             if(caracter2 >=97 && caracter2 <= 123){
+
+                var color= document.getElementById("nota");
+                color.style.color="black";
+
+                respuesta=false;
+                visible(respuesta);
+
+                buscar(text1);
+
+            }else{
                 console.log("NO VALIDO: " + caracter2);
 
                 var advertencia= document.getElementById("nota");
                 advertencia.style.color="red";
-                break;
-                
-            }else{
-                var color= document.getElementById("nota");
-                color.style.color="black";
 
-
-                respuesta=false;
+                respuesta=true;
                 visible(respuesta);
-        
             }
         }
     }
@@ -80,15 +89,18 @@ function encriptar2(){
         alert("¡¡PRIMERO DEBES AGREGAR DATOS!!");
     }
     
+    return original;
 }
 
 function desencriptar2(){
-    text1 = document.getElementById("area1").value; 
-    text2 = document.getElementById("area2").value; 
+    text1 = document.getElementById("area2").value;
+    text2 = document.getElementById("area2").value;
 
-    if(informacion==true){
+    var validar2=text2.length;
 
-        if(text2 != text1){
+
+    if(validar2>0){
+        if(text2 != original){
             document.getElementById("area2").innerHTML=text1;
     
             respuesta=false;
@@ -96,30 +108,12 @@ function desencriptar2(){
 
         }
     
-        if(text2==text1 && text1 != "" && text2 != ""){         //-------->
+        if(text2==original){         //-------->
             alert("¡¡EL TEXTO YA ESTA DESENCRIPATDO.!!");
-    
-            respuesta=false;
-            visible(respuesta);
         }
         
-        
-        if(text2 !="" && text1== ""){
-            alert("PRIMERO DEBES INGRESAR DATOS y ENCRIPTAR 2.");
-            informacion=false;
-
-        }
-        
-        if(text2=="" && text1 != ""){       //-------->
-            alert(" DEBES ECRIPTAR PRIMERO");
-    
-            respuesta=true;
-            visible(respuesta); 
-        }
-
-
     }else{
-        alert("PRIMERO DEBES INGRESAR DATOS CORRECTOS y ENCRIPTAR.");
+        alert("NO HAY CODIGO PARA DES-ENCRIPTAR.");
     }
 
 }
