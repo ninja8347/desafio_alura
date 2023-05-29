@@ -251,13 +251,6 @@ body{
 
 @media screen and ( max-width:768px){
 
-    #busqueda{
-        width: 40%;
-        margin: 0 auto;
-
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
 
     /* -----------------------*/
     
@@ -291,9 +284,16 @@ body{
     #area1{
         margin-top: 40px;
  
-        min-height: 70vh;
+        height: 70vh;
     
     }
+
+    #area2{
+
+        height: 80%;
+    
+    }
+    
     
     #encriptar{
         margin-right: 10px;
@@ -304,26 +304,24 @@ body{
    
     #bloque1{
         width: 100%;
-  
-        background: black;
         
     }
 
     #bloque2{
+        margin-top: 40px;
         width: 100%;
-
         padding: 20px;
         box-sizing: border-box;
     }
 
     #bloque3{
-        height: 40vh;   
+        height: 600px;   
         width: 100%;
     }
 
     #bloque5{
         width: 100%;
-        height: 50%;
+        height: 80vh;
         
     }
 
