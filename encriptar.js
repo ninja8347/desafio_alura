@@ -20,31 +20,56 @@ function visible(respuesta){
         document.getElementById("bloque8").style.display = "block";
         document.getElementById("bloque9").style.display = "none";
     }
+
 }
 
+
+
 visible(respuesta);
+
+
+
+function buscar(cambio) {
+
+    var codigo;
+
+    codigo=cambio.replaceAll("e", "enter").replaceAll("i", "imes").replaceAll("a", "ai").replaceAll("o", "ober").replaceAll("u", "ufat");
+
+    
+    console.log(codigo)
+    document.getElementById("area2").innerHTML=codigo;
+
+    
+  }
+
+
 
 function encriptar2(){
     text1 = document.getElementById("area1").value;
 
+    var simbolos=text1.charCodeAt();
 
-
+    console.log(simbolos);
+    
     if(text1 !=""){
 
-        var z="00000000";
-        var text1 = text1 + z;
+        if (text1 == text1.toUpperCase()){
 
-        console.log(text1);
-        document.getElementById("area2").innerHTML=text1;
+            var color= document.getElementById("nota");
+            color.style.color="red";
+        }
+        else{
+            buscar(text1);
 
-        respuesta=false;
+            var color= document.getElementById("nota");
+            color.style.color="black";
 
-        visible(respuesta);
-
-        informacion=true;
-
-        return informacion;
-
+            respuesta=false;
+            visible(respuesta);
+    
+            informacion=true;
+            return informacion;
+        }
     }
     else{
         alert("DEBES AGREGAR DATOS");
@@ -75,27 +100,23 @@ function desencriptar2(){
             visible(respuesta);
         }
         
-        /*
-        if(text2=="" && text1== ""){
+        
+        if(text2 !="" && text1== ""){
             alert("PRIMERO DEBES INGRESAR DATOS y ENCRIPTAR 2.");
-    
-            respuesta=true;
-            visible(respuesta);
+            informacion=false;
+
         }
-        */
         
         if(text2=="" && text1 != ""){       //-------->
             alert(" DEBES ECRIPTAR PRIMERO");
     
             respuesta=true;
-            visible(respuesta);
-            delete text1;
-            
+            visible(respuesta); 
         }
 
 
     }else{
-        alert("PRIMERO DEBES INGRESAR DATOS y ENCRIPTAR.");
+        alert("PRIMERO DEBES INGRESAR DATOS CORRECTOS y ENCRIPTAR.");
     }
 
 }
