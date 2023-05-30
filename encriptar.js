@@ -52,7 +52,7 @@ function encriptar2(){
     text1 = document.getElementById("area1").value;
     var validar=text1.length;
 
-    original=text1;
+    
 
     if(validar >0){
         text1 = document.getElementById("area1").value;
@@ -74,6 +74,8 @@ function encriptar2(){
 
                 buscar(text1);
 
+                original=text1;
+
             }else{
                 console.log("NO VALIDO: " + caracter2);
 
@@ -89,33 +91,73 @@ function encriptar2(){
         alert("¡¡PRIMERO DEBES AGREGAR DATOS!!");
     }
     
-    return original;
+    
 }
 
+
+
 function desencriptar2(){
-    text1 = document.getElementById("area2").value;
+    text1 = document.getElementById("area1").value;
+    var validar1 =text1.length;
+
     text2 = document.getElementById("area2").value;
-
     var validar2=text2.length;
-
-
-    if(validar2>0){
-        if(text2 != original){
-            document.getElementById("area2").innerHTML=text1;
     
-            respuesta=false;
-            visible(respuesta);
 
-        }
+    if(validar2>0 && validar1 >0 ){
+
+        if(validar2>0){
+            if(text2 != original){
+                document.getElementById("area2").innerHTML=text1;
     
-        if(text2==original){         //-------->
-            alert("¡¡EL TEXTO YA ESTA DESENCRIPATDO.!!");
-        }
+                respuesta=false;
+                visible(respuesta);
+
+            }
+    
+            if(text2==original){         //-------->
+                alert("¡¡EL TEXTO YA ESTA DESENCRIPATDO.!!");
+
+
+            }
         
-    }else{
-        alert("NO HAY CODIGO PARA DES-ENCRIPTAR.");
+        }else{
+            alert("NO HAY CODIGO PARA DES-ENCRIPTAR.");
+            respuesta=true;
+            visible(respuesta);
+        }
+    }
+    
+    //-------------------------------------------------------------->
+
+    if((validar2>0 && validar1==0) || (validar2==0 && validar1>0)){
+
+        if(validar2>0){
+            if(text2 != original){
+                document.getElementById("area2").innerHTML=text1;
+
+                respuesta=false;
+                visible(respuesta);
+
+            }
+
+            if(text2==original){      
+                alert("¡¡EL TEXTO YA ESTA DESENCRIPATDO.!!");
+
+
+            }
+        }
+
     }
 
+     //-------------------------------------------------------------->
+
+     if(validar2==0 && validar1==0 ){
+        alert("PRIMERO DEBES AGREGAR DATOS Y ENCRIPTAR.");
+        respuesta=true;
+        visible(respuesta);
+    
+    }
 }
 
 function copiar2(){
