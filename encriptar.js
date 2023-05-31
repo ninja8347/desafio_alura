@@ -46,48 +46,57 @@ var original;
 
 function encriptar2(){
     text1 = document.getElementById("area1").value;
-    var validar=text1.length;
 
-    if(validar >0){
-        text1 = document.getElementById("area1").value;
-        var validar=text1.length;
-    
+    if(text1.length > 0 ){
+
+        var contador=0;
+
         for(var x = 0; x < text1.length; x++) {
             var caracter=text1.charAt(x);
-            var caracter2= caracter.charCodeAt();
+            var caracter2=caracter.charCodeAt();
             
             console.log(caracter2);
 
             if(caracter2 >=97 && caracter2 <= 123){
-
-                var color= document.getElementById("nota");
-                color.style.color="black";
-
-                respuesta=false;
-                visible(respuesta);
-
-                buscar(text1);
-
-                original=text1;
-
-                acceder=true;
-   
-
-            }else{
-                console.log("NO VALIDO: " + caracter2);
-
-                var advertencia= document.getElementById("nota");
-                advertencia.style.color="red";
-
-                respuesta=true;
-                visible(respuesta);
+                contador=contador +1;
             }
+            else{
+                contador=0;
+                break;
+            }
+        }
+
+        console.log(contador);
+
+        if(contador>0){
+            var color= document.getElementById("nota");
+            color.style.color="black";
+    
+            respuesta=false;
+            visible(respuesta);
+
+            buscar(text1);
+    
+            original=text1;
+            acceder=true;
+        }
+        else{
+
+            console.log("NO VALIDO: " + caracter2);
+
+            var advertencia= document.getElementById("nota");
+            advertencia.style.color="red";
+
+
+
+            visible(respuesta);
         }
     }
     else{
         alert("¡¡PRIMERO DEBES AGREGAR DATOS!!");
     }
 }
+
 
 function desencriptar2(){
 
@@ -113,9 +122,7 @@ function desencriptar2(){
                     visible(respuesta);   /*  RESUELTO */
                 }
                 else{
-                    alert("No se puede desencriptar.")
-                    respuesta=true;
-                    visible(respuesta);   /*  RESUELTO */
+                    alert("EL texto ya esta desencriptado 2.")
                 }
             }
 
