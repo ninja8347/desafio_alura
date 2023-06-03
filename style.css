@@ -121,7 +121,6 @@ body{
 
 
 #area1{
- 
 
     width: 88%;
     min-height: calc(95vh - 250px);
@@ -177,8 +176,6 @@ body{
     margin-bottom: 20px;
     border-radius: 10x;
     bottom: 0;
-  
-
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
@@ -198,7 +195,7 @@ body{
 }
 
 .pie1{
-    width: 70%;
+    width: 60%;
     display: inline-block;
 }
 
@@ -215,7 +212,8 @@ body{
 
 .pie2{
     float: right;
-    width: 30%;
+    width: 40%;
+ 
 } 
 
 .pie_padre2{
@@ -226,11 +224,12 @@ body{
    display: flex;
    align-items: center;
    height: 5vh;
+
 } 
 
 .creditos{
     font-family:'consolas';
-
+    
 }
 
 #alura{
@@ -317,6 +316,7 @@ body{
     #bloque3{
         height: 600px;   
         width: 100%;
+     
     }
 
     #bloque5{
@@ -334,5 +334,14 @@ body{
         padding-left: 40px;
     
     }
+
+    #bloque7{
+        display: none !important;
+
+    }
     
+    #bloque9{
+ 
+        height: 50%;
+    }
 }
