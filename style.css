@@ -159,6 +159,30 @@ body{
     color: white;
 }
 
+#encriptar1:hover{                        /*AL PASAR EL RATON MODIFICA LOS SERVICIOS VISUALMETE       */
+    background: rgb(0, 110, 255);
+    border-color: #0a3871;
+    border-width: 2.5px;
+}
+
+#encriptar1:active{                        /*AL DAR CLICK AL RATON MODIFICA LOS SERVICIOS VISUALMETE       */
+    background: rgb(0, 110, 255);
+    border-width: 2.5px;
+}
+
+
+#desencriptar1:hover{                        /*AL PASAR EL RATON MODIFICA LOS SERVICIOS VISUALMETE       */
+    border-color: rgb(0, 110, 255);
+    border-width: 2.5px;
+    color: rgb(0, 110, 255);
+    background: white;
+}
+
+#desencriptar1:active{                        /*AL DAR CLICK AL RATON MODIFICA LOS SERVICIOS VISUALMETE       */
+    background: white;
+    border-width: 2.5px;
+}
+
 .botones1{
     width: 40%;
     padding: 10px;
